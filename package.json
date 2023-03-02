@@ -1,0 +1,9 @@
+{
+  "name": "my-node-app",
+  "version": "1.0.0",
+  "description": "A Node.js app that retrieves values from Redis",
+  "main": "app.js",
+  "dependencies": {
+    "redis": "^3.1.2"
+  }
+}
