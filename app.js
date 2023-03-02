@@ -3,16 +3,8 @@ const url = require('url');
 const redis = require('redis');
 
 // Redis connection details
-const dbHost = process.env.DB_HOST;
-const dbPort = process.env.DB_PORT;
-const dbName = process.env.DB_NAME;
-const dbPassword = process.env.DB_PASSWORD;
-const redisClient = redis.createClient({
-  host: dbHost,
-  port: dbPort,
-  password: dbPassword,
-  db: dbName,
-});
+const redisUrl = process.env.DB_CONNECTION_URL;
+const redisClient = redis.createClient(redisUrl);
 
 // Create the HTTP server
 const server = http.createServer((req, res) => {
